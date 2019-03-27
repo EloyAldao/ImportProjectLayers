@@ -36,10 +36,11 @@ class Ui_ImportLayerTreeDialogBase(object):
         self.vert_lay_file.addLayout(self.horizontalLayout)
         self.vert_lay_global.addWidget(self.groupBox)
 
+        ################################################################################################################
+        # Aquí inserto QgsLayerTreeView. Con QgsProjectionSelectionTreeWidget() por ejemplo funciona bien
         self.tree_widget = QgsLayerTreeView(ImportLayerTreeDialogBase)
-        # self.tree_widget.setMinimumSize(QtCore.QSize(200, 200))
-        # self.tree_widget.setObjectName("tree_widget")
         self.vert_lay_global.addWidget(self.tree_widget)
+        ################################################################################################################
 
         self.button_box = QtWidgets.QDialogButtonBox(ImportLayerTreeDialogBase)
         self.button_box.setOrientation(QtCore.Qt.Horizontal)
